@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'phoenix-wc-wiki-ngx';
+
+  sendCustomEvent() {
+    const data = {
+      name: 'DataSentThoughtCustomEvent'
+    };
+    const event = new CustomEvent('phoenix-wc-wiki-ngx-ce-data-sent-test', { detail: data });
+    window.dispatchEvent(event);
+
+  }
 }
